@@ -1,5 +1,6 @@
 package com.stephen.demos.springredis
 
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -8,4 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(
     private val userService: UserService
 ) {
+
+    @GetMapping
+    fun findAll() = userService.findAll()
 }
