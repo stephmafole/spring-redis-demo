@@ -1,4 +1,9 @@
 package com.stephen.demos.springredis
 
-class User {
-}
+import org.springframework.data.redis.core.RedisHash
+
+@RedisHash("Session")
+class User(
+    val firstname: String,
+    val age: Int
+)
