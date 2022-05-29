@@ -4,3 +4,4 @@ spring:
     database: 0
     port: 6379
     connect-timeout: 60000
+    password: ${REDIS_PASSWORD}
